@@ -1,0 +1,15 @@
+{
+  "usd": 0.0296714,
+  "tur": 2,
+  "hata": false,
+  "modeller": {
+    "claude-haiku-4-5-20251001": 0.0105,
+    "claude-sonnet-5-5": 0.0192
+  },
+  "yol": "akilli",
+  "kos": 2,
+  "sure_sn": 36,
+  "dogru": 60,
+  "toplam": 60,
+  "supheli": "3/3"
+}

@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Basamak 1: Haiku sınıflama çıktısı",
+  "type": "object",
+  "required": ["siniflar"],
+  "additionalProperties": false,
+  "properties": {
+    "siniflar": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["id", "sinif", "ozet"],
+        "additionalProperties": false,
+        "properties": {
+          "id": {"type": "string", "minLength": 1},
+          "sinif": {"type": "string", "enum": ["acil", "cevap-gerekli", "bilgi", "bulten", "bildirim", "supheli"]},
+          "ozet": {"type": "string", "minLength": 1, "maxLength": 200}
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,11 @@
+From: KodHub <noreply@kodhub.example>
+To: Deniz Aydın <deniz.aydin@kuzeyambalaj.example>
+Subject: [stok-paneli] Derleme başarısız: ana dal
+Date: Wed, 07 Oct 2026 03:25:00 +0300
+Message-ID: <040.202610070325@posta.example>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 8bit
+MIME-Version: 1.0
+
+Ana daldaki son derleme başarısız oldu. Başarısız adım: testler (2 test hatası).
+Ayrıntılar için derleme sayfasını açın.

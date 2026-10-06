@@ -1,0 +1,8 @@
+cikti/
+sabah-ozeti.md
+olc/sonuclar/*.ham.json
+__pycache__/
+*.pyc
+.DS_Store
+.env
+*.local.json

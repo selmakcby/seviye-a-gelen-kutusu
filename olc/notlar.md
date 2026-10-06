@@ -1,0 +1,9 @@
+## Notlar: bizim ölçümümüz (6 Ekim 2026, dürüst okuma)
+
+- **Kazanç maliyette, doğrulukta değil.** Bu 60 e-postalık kutuda iki yol da 60/60 buldu ve 3 tuzak e-postanın üçünü de yakaladı. Opus yanlış yapmıyor, sadece her e-postayı ajan döngüsünde okumak pahalı (koşu başına ~29 bin token önbelleğe yazma + 6,7 bin token çıktı, 5 tur).
+- **Akıllı yol da her zaman bu kadar ucuz değil.** Yukarıdaki iki akıllı koşu, prompt'u önbellekten okudu. Günün ilk (soğuk) koşusunda ölçtüğümüz: 0,0505 USD (Haiku 0,0300 + Sonnet 0,0205), 42,5 sn, 59/60 (bir imzalı duyuruyu "bildirim" sandı). Soğukta bile naif yol ~7,5 kat pahalı.
+- **Haiku'da "düşünme" kapalı.** Açıkken aynı sınıflama 0,065-0,082 USD ve 90-127 sn sürdü (8 bin düşünme token'ı); kapatınca 0,030 USD ve 26 sn, doğruluk düşmedi. Ayar: `betik/ortak.py` içinde `alwaysThinkingEnabled: false`.
+- **Süre:** akıllı yol ~2 kat hızlı (36 sn vs 66 sn), çünkü 22 e-posta hiç modele gitmiyor ve kalanlar tek çağrıda sınıflanıyor.
+- **Naif yolda bir tutarsızlık:** 1. koşunun metin özeti "10 acil, 13 bildirim" yazdı, aynı cevabın sonundaki JSON doğru sayıyı (9 / 14) verdi. Ajanın düzyazısı ile yapılandırılmış çıktısı ayrışabiliyor; puanlamada JSON kullanıldı.
+- **Ortam:** Claude Code 2.1.287, Ekim 2026 liste fiyatları. Naif koşu `--setting-sources project` ile koştu, kullanıcının kişisel CLAUDE.md'si yüklü kaldı (gerçek kullanımdaki gibi); akıllı yolun çağrıları kişisel CLAUDE.md'yi dışarıda bırakır. Senin sayıların farklı çıkabilir, `./olc/olc.sh` ile kendin ölç.
+- **Tekrar mekanizması gerçekten çalışıyor.** Ölçüm dışındaki bir koşuda (skill'i Claude Code içinden çağırdığımızda) Haiku'nun ilk cevabı şemaya uymadı, hat bir kez tekrar denedi: o koşu 0,075 USD, 58 sn, 59/60 tuttu. Akıllı yolun gerçekçi aralığı 0,03-0,08 USD; naif yol yine 5-12 kat pahalı.

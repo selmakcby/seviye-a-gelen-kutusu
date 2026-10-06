@@ -1,0 +1,14 @@
+{
+  "usd": 0.3805508,
+  "tur": 5,
+  "hata": false,
+  "modeller": {
+    "claude-opus-5-5": 0.3806
+  },
+  "yol": "naif",
+  "kos": 1,
+  "sure_sn": 66,
+  "dogru": 60,
+  "toplam": 60,
+  "supheli": "3/3"
+}

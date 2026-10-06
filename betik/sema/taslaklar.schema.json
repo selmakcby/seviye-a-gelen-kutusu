@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Basamak 2: Sonnet cevap taslakları",
+  "type": "object",
+  "required": ["taslaklar"],
+  "additionalProperties": false,
+  "properties": {
+    "taslaklar": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["id", "taslak"],
+        "additionalProperties": false,
+        "properties": {
+          "id": {"type": "string", "minLength": 1},
+          "taslak": {"type": "string", "minLength": 1, "maxLength": 1200}
+        }
+      }
+    }
+  }
+}
